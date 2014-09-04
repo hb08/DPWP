@@ -24,7 +24,8 @@ def getWords():
     d = str(raw_input('Who is your favorite actor?  '))
     e = str(raw_input('What is your favorite sport?   '))
     f = str(raw_input('What is your favorite color?   '))
-    return {a, b, c, d, e, f}
+    together = [a, b, c, d, e, f]
+    return together
 
 # Populate User Input as numbers array and words dictionary
 numbers = getNumbers()
@@ -38,11 +39,11 @@ else:
 
 # For loop to turn all numbers into strings and extend to words array
 for number in numbers:
-    number = str(number)
-    words.append(number)
+    a = str(number)
+    words.extend(a)
 
 # Favorite Number, Name, favorite color, item, Name, actor, book, added, random number, sport, age, name
-
+print words
 
 
 

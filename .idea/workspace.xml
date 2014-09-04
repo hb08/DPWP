@@ -39,8 +39,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Betancourt_Harmony_Madlib/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76419216" vertical-offset="105" max-vertical-offset="1080">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.69868994" vertical-offset="195" max-vertical-offset="1095">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -312,7 +312,11 @@
       <created>1409810179587</created>
       <updated>1409810179587</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Starting Loop">
+      <created>1409813145467</created>
+      <updated>1409813145467</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -358,7 +362,8 @@
     <MESSAGE value="Getting More" />
     <MESSAGE value="Start from 4th number" />
     <MESSAGE value="Rearranging code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearranging code" />
+    <MESSAGE value="Starting Loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting Loop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -382,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Betancourt_Harmony_Madlib/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76419216" vertical-offset="105" max-vertical-offset="1080">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.69868994" vertical-offset="195" max-vertical-offset="1095">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding />
         </state>
       </provider>

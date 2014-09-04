@@ -28,29 +28,25 @@ def getWords():
 def newNum(age, pick):
     import random
     ran = random.randint(1, 10)
-    print ran
     if age>pick:
         return age/ran
     else:
         return pick/ran
-
 
 # Populate User Input as numbers array and words dictionary
 numbers = getNumbers()
 newNum(numbers[1], numbers[2])
 words = getWords()
 
-
-
 # For loop to turn all numbers into strings and extend to words array
 for number in numbers:
     a = str(number)
     words.extend(a)
 
-# Favorite Number, Name, favorite color, item, Name, actor, book, added, random number, sport, age, name
+# Favorite Number 6, Name 0, favorite color 5, item 1, Name 0, actor 3, book 2, added 8, random number 8, sport 4, age 7, name 0
+madLib = messages["start"] + words[6] + messages["two"] + words[0] + messages["three"] + words[5] + " " + words[1] + messages["four"] + words[0] + messages["five"] + words[3] + messages["six"] + words[3] + messages["seven"] + words[2] + messages["eight"] + words[8] + messages["nine"] + words[9] + messages["ten"] + words[4] + messages["eleven"] + words[7] + words[0] + messages["end"]
 
-
-
+print madLib
 
 
 

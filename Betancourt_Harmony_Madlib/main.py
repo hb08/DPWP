@@ -7,10 +7,7 @@ __author__ = 'Harmony Betancourt'
 # Variables for set text in dictionary
 messages = {"greeting": "Welcome to the MadLibs Game!", "goodbye": "Thanks for playing!", "start": "It was only ", "two": " days before Halloween when the dead rose from their graves. ", "three": " was prepared. With a ", "four":  " as a weapon.", "five": " With the help of ", "six": "who weilded a hardcover copy of ", "seven": " managed to kill the ", "eight":  "zombies between Full Sail University and the military zone. There were", "nine": " other survivors, all members of the ", "ten": " team. It was going to be a very hard year for ", "eleven": " year old ", "end": ", a very hard year indeed."}
 
-
-print
-
-# Functions to Collect Information in arrays
+# FUNCTION: Collect User Input in Lists
 def getNumbers():
     a =int(raw_input('What is your favorite number?   '))
     b =int(raw_input('How old are you?   '))
@@ -27,15 +24,23 @@ def getWords():
     together = [a, b, c, d, e, f]
     return together
 
+# FUNCTION: Create New Number
+def newNum(age, pick):
+    import random
+    ran = random.randint(1, 10)
+    print ran
+    if age>pick:
+        return age/ran
+    else:
+        return pick/ran
+
+
 # Populate User Input as numbers array and words dictionary
 numbers = getNumbers()
+newNum(numbers[1], numbers[2])
 words = getWords()
 
-# Create a fourth number
-if numbers[1]>numbers[2]:
-    numbers.append(numbers[1] + numbers[2])
-else:
-    numbers.append(numbers[0] + numbers[1])
+
 
 # For loop to turn all numbers into strings and extend to words array
 for number in numbers:
@@ -43,7 +48,8 @@ for number in numbers:
     words.extend(a)
 
 # Favorite Number, Name, favorite color, item, Name, actor, book, added, random number, sport, age, name
-print words
+
+
 
 
 

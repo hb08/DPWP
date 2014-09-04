@@ -4,10 +4,13 @@ __author__ = 'Harmony Betancourt'
     Project: Madlib
     Purpose: Create a mad lib that collects user information and populates the output
 '''
-# Begin with welcome
-print "Welcome to the Madlib Game.\nLet's get started!"
+# Variables for set text in dictionary
+text = {"greeting": "Welcome to the MadLibs Game!", "goodbye": "Thanks for playing!", "start": "It was only ", "two": " days before Halloween when the dead rose from their graves. ", "three": " was prepared. With a ", "four":  " as a weapon.", "five": " With the help of ", "six": "who weilded a hardcover copy of ", "seven": " managed to kill the ", "eight":  "zombies between Full Sail University and the military zone. There were", "nine": " other survivors, all members of the ", "ten": " team. It was going to be a very hard year for ", "eleven": " year old ", "end": ", a very hard year indeed."}
 
-# Functions to Collect Information
+
+print
+
+# Functions to Collect Information in arrays
 def getNumbers():
     a =int(raw_input('What is your favorite number?   '))
     b =int(raw_input('How old are you?   '))
@@ -21,7 +24,7 @@ def getWords():
     d = str(raw_input('Who is your favorite actor?  '))
     e = str(raw_input('What is your favorite sport?   '))
     f = str(raw_input('What is your favorite color?   '))
-    return {"name": a, "item": b, "book": c, "actor": d, "sport": e, "color": f}
+    return {[a, b, c, d, e, f]}
 
 # Populate User Input as numbers array and words dictionary
 numbers = getNumbers()
@@ -32,6 +35,16 @@ if numbers[1]>numbers[2]:
     numbers.append(numbers[1] + numbers[2])
 else:
     numbers.append(numbers[0] + numbers[1])
+
+# For loop to turn all numbers into strings and extend to words array
+for each t in text
+    print self
+
+# Favorite Number, Name, favorite color, item, Name, actor, book, added, random number, sport, age, name
+
+
+
+
 
 
 

@@ -6,9 +6,10 @@ __author__ = 'Harmony Betancourt'
 '''
 
 '''
-    DICTIONARY of set strings
+    DICTIONARY of set strings, Greet User
 '''
 messages = {"greeting": "Welcome to the MadLibs Game!", "goodbye": "Thanks for playing!", "start": "It was only ", "two": " days before Halloween when the dead rose from their graves. ", "three": " was prepared. With a ", "four":  " as a weapon, ", "five": ", with the help of ", "six": ", who weilded a hardcover copy of ", "seven": ", managed to kill the ", "eight":  " zombies between Full Sail University and the military zone. There were ", "nine": " other survivors, all members of the ", "ten": " team. It was going to be a very hard year for ", "eleven": " year old ", "end": ", a very hard year indeed."}
+print messages["greeting"]
 
 '''
     FUNCTION: Collect User Input in Lists/Arrays
@@ -63,6 +64,7 @@ for n in numbers:
 mad_lib = messages["start"] + words[6] + messages["two"] + words[0] + messages["three"] + words[5] + " " + words[1] + messages["four"] + words[0] + messages["five"] + words[3] + messages["six"] + words[2] + messages["seven"] + words[6] + messages["eight"] + words[8] + messages["nine"] + words[4] + messages["ten"] + words[7] + messages["eleven"] + words[0] + messages["end"]
 
 print mad_lib
+print messages["goodbye"]
 
 
 

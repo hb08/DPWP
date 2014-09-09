@@ -1,0 +1,13 @@
+body {
+	background: url('bg.jpg');
+}
+#wrapper {
+	margin: 1% auto;
+	width: 80%;
+}
+#wrapper h1 {
+	text-align: center;
+}
+label {
+	display: block;
+}

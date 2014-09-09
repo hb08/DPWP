@@ -1,8 +1,9 @@
 class Site(object):
     def __init__(self):
+        # Variables for site info
         self.title = "Contact Us!"
         self.css = "css/style.css"
-        # Heading for the page is doctype, header, and opening body tag
+        # Heading for the page is doctype, head, opening body and wrapper tags, and page heading
         self.header = """
         <!DOCTYPE HTML>
             <html>
@@ -10,17 +11,20 @@ class Site(object):
                  <title>{self.title}</title>
                 <link href="{self.css}" rel="Stylesheet" type="text/css" />
              </head>
-             <body>"""
+             <body>
+                <div id='wrapper'>
+                    <h1>{self.title}</h1> """
         # Format Header with locals
         self.header = self.header.format(**locals())
 
-        # Declare body, but don't give it an actual variable yet, that is in a function later
+        # Declare body, but don't give it an actual variable yet, that is done on if statement in main.py
         self.body = " "
 
-        # Closing for body tag, footer, and html
-        self.closer = """<footer>Made by Harmony</footer>
+        # Closing for body and wrapper tag, footer, and html
+        self.closer = """</div>
+                <footer>Made by Harmony</footer>
             </body>
-        </html>"""
+        </html> """
 
         # Contact Form created
         self.contact_form = """ <form>

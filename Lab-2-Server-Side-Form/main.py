@@ -24,20 +24,21 @@ class MainHandler(webapp2.RequestHandler):
 
             # Messages to Print
             thanks = "<br/>We read every message we receive, and will give yours the consideration it deserves."
-            # Set Body with beginning of message
+            # Set beginning of message as variable to avoid too long error
             b = "Thank you, " + contact + ", for your " + " message of <span>'" + message + "'</span> " + thanks
+            # Site body is beginning message and contact response
             site.body = b + "<br/>We will be in contact by " + response
             # Add in personalized response
             if response == "phone":
                 site.body += " at number " + phone
             elif response == "email":
                 site.body += " at email address " + email
-        # Otherwise
+        # Otherwise if this is a new page
         else:
             # Show the form
             site.body = site.contact_form
 
-        # Print Result Page
+        # Print full page to browser
         self.response.write(site.header + site.body + site.closer)
 
 

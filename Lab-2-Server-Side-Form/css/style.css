@@ -1,13 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand|Annie+Use+Your+Telescope|Londrina+Shadow|Londrina+Sketch);
 body {
-	background: url('bg.jpg');
+	background: url('../images/bg.jpg');
 }
 #wrapper {
 	margin: 1% auto;
+	padding: 1%;
 	width: 80%;
 }
 #wrapper h1 {
+	font: 4em 'Londrina Sketch', cursive;
+	margin: 0 1%;
 	text-align: center;
 }
 label {
 	display: block;
+}
+footer {
+	font-size: .7em;
+	text-align: center;
 }

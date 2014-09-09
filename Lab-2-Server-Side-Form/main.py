@@ -39,7 +39,7 @@ class MainHandler(webapp2.RequestHandler):
             site.body = site.contact_form
 
         # Print full page to browser
-        self.response.write(site.header + site.body + site.closer)
+        self.response.write(site.header + site.body_start + site.body + site.closer)
 
 
 app = webapp2.WSGIApplication([

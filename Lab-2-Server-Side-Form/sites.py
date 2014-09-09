@@ -4,18 +4,28 @@ class Site(object):
         self.title = "Contact Us!"
         self.css = "css/style.css"
         # Heading for the page is doctype, head, opening body and wrapper tags, and page heading
-        self.header = """
-        <!DOCTYPE HTML>
+        self.header = """<!DOCTYPE HTML>
             <html>
              <head>
                  <title>{self.title}</title>
                 <link href="{self.css}" rel="Stylesheet" type="text/css" />
              </head>
-             <body>
-                <div id='wrapper'>
-                    <h1>{self.title}</h1> """
+             <body>"""
         # Format Header with locals
         self.header = self.header.format(**locals())
+
+        self.body_start = """<div id='wrapper'>
+            <h1>{self.title}</h1>
+            <nav>
+                <ul>
+                    <li><a href='#'><img src="images/icon_home.png" /><p>Home</p></a></li>
+                    <li><a href='#'><img src="images/icon_contact.png" /><p>Contact</p></a></li>
+                    <li><a href='#'><img src="images/icon_locations.png" /><p>Locations</p></a></li>
+                    <li><a href='#'><img src="images/icon_wip.png" /><p>Work</p></a></li>
+                </ul>
+            </nav>
+            """
+        self.body_start = self.body_start.format(**locals())
 
         # Declare body, but don't give it an actual variable yet, that is done on if statement in main.py
         self.body = " "

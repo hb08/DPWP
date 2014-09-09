@@ -6,70 +6,58 @@ Design Patterns for Web Programming
 Simple Form
 '''
 import webapp2
+from template import Site
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        # Heading for the page is doctype, header, and opening body tag
-        heading = ''' <!DOCTYPE HTML>
-        <html>
-            <head>
 
-            </head>
-            <body>
-        '''
-        # Declare body, but don't give it an actual variable yet, that is in a function later
-        body = ''
-
-        # Closing for body tag, footer, and html
-        closer = '''
-            </body>
-            <footer>
-
-            </footer>
-        </html>
-        '''
         # Contact Form created
         contact_form = ''' <form>
             <label>Name:</label>
             <input type="text" name="contact" />
             <label>Phone:</label>
             <input type="phone" name="phone" />
-            <label>Email:</label
-            <input type="email" name="email"/>
+            <label>Email:</label>
+            <input type="text" name="email" />
 
             <label>Reason for Contact:</label>
-            <select>
-                <option value="question" name="reason">Question</option>
-                <option value="comment" name="reason">Comment</option>
-                <option value="concern" name="reason">Concern</option>
-                <option value="personal" name="reason">Personal</option>
+            <select name="reason">
+                <option value="question">Question</option>
+                <option value="comment">Comment</option>
+                <option value="concern">Concern</option>
+                <option value="personal">Personal</option>
             </select>
 
             <label>Respond By:</label>
-            <input type="checkbox" name="contact" value="email">Email<br/>
-            <input type="checkbox" name="contact" value="phone">Phone<br/>
-            <input type="checkbox" name="contact" value="none">No Response Needed.
+            <input type="checkbox" name="response" value="email"/>Email<br/>
+            <input type="checkbox" name="response" value="phone"/>Phone<br/>
+            <input type="checkbox" name="response" value="none"/>No Response Needed.
 
-            <textarea name="message" placeholder="Type here" maxlength="1000">
-
-            </textarea>
+            <textarea name="message" placeholder="Type here" maxlength="1000"> </textarea>
+            <input type="submit" value="Submit"/>
         </form>
         '''
         # If the page has a Get request
         if self.request.GET:
-            # Set all the variables
-            name = self.request.GET['name']
-            phone = self.request.GET['phone']
-            email = self.request.GET['email']
-            reason = self.request.GET['reason']
+            # Set all the variables to user inputs
             contact = self.request.GET['contact']
+            phone = self.request.GET['phone']
+            response = self.request.GET['response']
+            email = self.request.GET['email']
             message = self.request.GET['message']
+            # As a Select, Reason needs to be put into an if statement
+            reason = self.request.get_all('reason')
+            for r in reason:
+                print r
+            # Messages to Print
+            thanks = "<br/>We read every message we recieve, and will give yours the consideration it deserves."
             # Set Body with beginning of message
-            body = "Thank you, " + name + ", for your message of " + message + "<br/>We read every message we recieve, and will give yours the consideration it deserves."
+            body = "Thank you, " + contact + ", for your " + " message of <span>'" + message + "'</span> " + thanks
             # Add in personalized response
             if contact == "phone":
-                body = body + "<br/>We will be in contact by " + contact + " at number " + phone
+                body = body + "<br/>We will be in contact by " + response + " at number " + phone
             elif contact == "email":
-                body = body + "<br/>We will be in contact by " + contact + " at email address " + email
+                body = body + "<br/>We will be in contact by " + response + " at email address " + email
         # Otherwise
         else:
             # Show the form

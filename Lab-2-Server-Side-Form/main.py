@@ -19,20 +19,21 @@ class MainHandler(webapp2.RequestHandler):
             contact = self.request.GET['contact']
             phone = self.request.GET['phone']
             response = self.request.GET['response']
+            reason = self.request.GET['reason']
             email = self.request.GET['email']
             message = self.request.GET['message']
 
             # Messages to Print
-            thanks = "<br/>We read every message we receive, and will give yours the consideration it deserves."
-            # Set beginning of message as variable to avoid too long error
-            b = "Thank you, " + contact + ", for your " + " message of <span>'" + message + "'</span> " + thanks
-            # Site body is beginning message and contact response
-            site.body = b + "<br/>We will be in contact by " + response
+            # Build site body by concat pre set text and user input
+            site.body = site.text["thanks_head"] + contact + site.text["thanks_start"] + reason
+            site.body += site.text["thanks_mes"] + message + site.text["thanks_close"]
             # Add in personalized response
             if response == "phone":
-                site.body += " at number " + phone
+                site.body += site.text["appr"] + site.text["con"] + phone + "</p>" + site.text["link"]
             elif response == "email":
-                site.body += " at email address " + email
+                site.body += site.text["appr"] + site.text["con"] + email + "</p>" + site.text["link"]
+            else:
+                site.body += site.text["appr"] + "</p>" + site.text["link"]
         # Otherwise if this is a new page
         else:
             # Show the form
@@ -40,7 +41,8 @@ class MainHandler(webapp2.RequestHandler):
 
         # Print full page to browser
         self.response.write(site.header + site.body_start + site.body + site.closer)
-
+        test = self.request.get_all('reason')
+        print test
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

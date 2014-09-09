@@ -18,10 +18,10 @@ class Site(object):
             <h1>{self.title}</h1>
             <nav>
                 <ul>
-                    <li><a href='#'><img src="images/icon_home.png" /><p>Home</p></a></li>
-                    <li><a href='#'><img src="images/icon_contact.png" /><p>Contact</p></a></li>
-                    <li><a href='#'><img src="images/icon_locations.png" /><p>Locations</p></a></li>
-                    <li><a href='#'><img src="images/icon_wip.png" /><p>Work</p></a></li>
+                    <li><a href='#' id='home'><p>Home</p></a></li>
+                    <li><a href='#' id='contact'><p>Contact</p></a></li>
+                    <li><a href='#' id='location'><p>Locations</p></a></li>
+                    <li><a href='#' id='work'><p>Work</p></a></li>
                 </ul>
             </nav>
             """
@@ -32,33 +32,58 @@ class Site(object):
 
         # Closing for body and wrapper tag, footer, and html
         self.closer = """</div>
-                <footer>Made by Harmony</footer>
+                <footer>Made by Harmony<br/>Icons by <a href='http://azuresol.deviantart.com/'>Azuresol</a></footer>
             </body>
         </html> """
 
         # Contact Form created
-        self.contact_form = """ <form>
-            <label>Name:</label>
-            <input type="text" name="contact" />
-            <label>Phone:</label>
-            <input type="phone" name="phone" />
-            <label>Email:</label>
-            <input type="text" name="email" />
-
-            <label>Reason for Contact:</label>
-            <select name="reason">
-                <option value="question">Question</option>
-                <option value="comment">Comment</option>
-                <option value="concern">Concern</option>
-                <option value="personal">Personal</option>
-            </select>
-
-            <label>Respond By:</label>
-            <input type="checkbox" name="response" value="email"/>Email<br/>
-            <input type="checkbox" name="response" value="phone"/>Phone<br/>
-            <input type="checkbox" name="response" value="none"/>No Response Needed.
-
-            <textarea name="message" placeholder="Type here" maxlength="1000"> </textarea>
+        self.contact_form = """<h2>We'd love to hear from you!</h2>
+         <form>
+            <div class="col">
+                <div class="row">
+                    <label>Name:</label>
+                    <input type="text" name="contact" />
+                </div>
+                <div class="row">
+                    <label>Phone:</label>
+                    <input type="phone" name="phone" />
+                    <label>Email:</label>
+                    <input type="text" name="email" />
+                </div>
+                <div class="row">
+                    <label class='sub'>Respond By:</label>
+                    <label><input type="checkbox" name="response" value="email"/><p>Email</p></label>
+                    <label><input type="checkbox" name="response" value="phone"/><p>Phone</p></label>
+                    <label><input type="checkbox" name="response" value="none"/><p>No Response Needed.</p></label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label>Reason for Contact:</label>
+                    <select name="reason">
+                        <option value="question">Question</option>
+                        <option value="comment">Comment</option>
+                        <option value="concern">Concern</option>
+                        <option value="personal">Personal</option>
+                     </select>
+                </div>
+                <div class="row">
+                    <label>Message:</label>
+                    <textarea name="message" placeholder="Type here" maxlength="1000"> </textarea>
+                </div>
+            </div>
             <input type="submit" value="Submit"/>
         </form>"""
+
+        # Static Text
+        self.text = {
+            'thanks_head': "<h2>Thank you!</h2><p class='ty'>",
+            'thanks_start': ", we appreciate the ",
+            'thanks_mes': " message you sent of: <br/> <span>",
+            'thanks_close': "</span> ",
+            'appr': "<br/>We read every message we receive, and will give yours the consideration it deserves.",
+            'con': "<br/>We will contact you at ",
+            'link': "<div class='tyLinks'><a href='#'>Go Back</a><a href='#'>Home</a></div>"
+        }
+
 

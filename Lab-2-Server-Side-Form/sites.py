@@ -38,7 +38,7 @@ class Site(object):
 
         # Contact Form created
         self.contact_form = """<h2>We'd love to hear from you!</h2>
-         <form>
+         <form method="get">
             <div class="col">
                 <div class="row">
                     <label>Name:</label>
@@ -83,7 +83,7 @@ class Site(object):
             'thanks_close': "</span> ",
             'appr': "<br/>We read every message we receive, and will give yours the consideration it deserves.",
             'con': "<br/>We will contact you at ",
-            'link': "<div class='tyLinks'><a href='#'>Go Back</a><a href='#'>Home</a></div>"
+            'link': "<div class='tyLinks'><a href='http://localhost:12080'>Go Back</a><a href='#'>Home</a></div>"
         }
 
 

@@ -49,10 +49,10 @@ class MainHandler(webapp2.RequestHandler):
             <input type="checkbox" name="contact" value="phone">Phone<br/>
             <input type="checkbox" name="contact" value="none">No Response Needed.
 
-            <textarea name="message" placeholder="Your message here" maxlength="1000">
+            <textarea name="message" placeholder="Type here" maxlength="1000">
 
-            <textarea>
-        </form
+            </textarea>
+        </form>
         '''
         # If the page has a Get request
         if self.request.GET:
@@ -71,7 +71,7 @@ class MainHandler(webapp2.RequestHandler):
             elif contact == "email":
                 body = body + "<br/>We will be in contact by " + contact + " at email address " + email
         # Otherwise
-            else:
+        else:
             # Show the form
             body = contact_form
 

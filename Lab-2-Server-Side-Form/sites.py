@@ -52,9 +52,14 @@ class Site(object):
                 </div>
                 <div class="row">
                     <label class='sub'>Respond By:</label>
-                    <label><input type="checkbox" name="response" value="email"/><p>Email</p></label>
-                    <label><input type="checkbox" name="response" value="phone"/><p>Phone</p></label>
-                    <label><input type="checkbox" name="response" value="none"/><p>No Response Needed.</p></label>
+                    <label><input type="radio" name="response" value="email"/><p>Email</p></label>
+                    <label><input type="radio" name="response" value="phone"/><p>Phone</p></label>
+                    <label><input type="radio" name="response" value="none"/><p>No Response Needed.</p></label>
+                </div>
+                <div class="row">
+                    <label class='sub'><input type="checkbox" name="terms" value="newsletter"/>
+                        I have read the <a href='#'>Terms and Conditions</a>
+                    </label>
                 </div>
             </div>
             <div class="col">

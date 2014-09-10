@@ -34,7 +34,7 @@ class Site(object):
 
         # Closing for body and wrapper tag, footer, and html
         self.closer = """</div>
-                <footer>Made by Harmony<br/>Icons by <a href='http://azuresol.deviantart.com/'>Azuresol</a></footer>
+                <footer>Made by Harmony | Icons by <a href='http://azuresol.deviantart.com/'>Azuresol</a></footer>
             </body>
         </html> """
 

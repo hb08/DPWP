@@ -14,6 +14,7 @@ class Site(object):
         # Format Header with locals
         self.header = self.header.format(**locals())
 
+        # Body starts - wrapper through nav
         self.body_start = """<div id='wrapper'>
             <h1>{self.title}</h1>
             <nav>
@@ -25,9 +26,10 @@ class Site(object):
                 </ul>
             </nav>
             """
+        # Format Body with locals
         self.body_start = self.body_start.format(**locals())
 
-        # Declare body, but don't give it an actual variable yet, that is done on if statement in main.py
+        # Declare full body, but don't give it an actual variable yet, that is done on if statement in main.py
         self.body = " "
 
         # Closing for body and wrapper tag, footer, and html
@@ -42,13 +44,13 @@ class Site(object):
             <div class="col">
                 <div class="row">
                     <label>Name:</label>
-                    <input type="text" name="contact" />
+                    <input type="text" name="contact" required/>
                 </div>
                 <div class="row">
                     <label>Phone:</label>
-                    <input type="phone" name="phone" />
+                    <input type="phone" name="phone" required/>
                     <label>Email:</label>
-                    <input type="text" name="email" />
+                    <input type="text" name="email" required/>
                 </div>
                 <div class="row">
                     <label class='sub'>Respond By:</label>
@@ -57,7 +59,7 @@ class Site(object):
                     <label><input type="radio" name="response" value="none"/><p>No Response Needed.</p></label>
                 </div>
                 <div class="row">
-                    <label class='sub'><input type="checkbox" name="terms" value="newsletter"/>
+                    <label class='sub tc'><input type="checkbox" name="terms" value="newsletter"/>
                         I have read the <a href='#'>Terms and Conditions</a>
                     </label>
                 </div>
@@ -74,7 +76,7 @@ class Site(object):
                 </div>
                 <div class="row">
                     <label>Message:</label>
-                    <textarea name="message" placeholder="Type here" maxlength="1000"> </textarea>
+                    <textarea name="message" placeholder="Type here" maxlength="1000" required> </textarea>
                 </div>
             </div>
             <input type="submit" value="Submit"/>

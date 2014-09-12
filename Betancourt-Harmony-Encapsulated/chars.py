@@ -51,3 +51,9 @@ class Character(object):
         self.missions = 0
         self.victory = 0
         self.__status = "PC"
+
+    def success_rate(self):
+        sr = self.victory/self.missions
+        return sr
+
+

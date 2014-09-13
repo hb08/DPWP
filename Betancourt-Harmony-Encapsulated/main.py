@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-'''
+"""
 Harmony Betancourt
 9/10/14
 Design Patterns For Web Programming
 Encapsulated Calculator
-'''
+"""
 import webapp2
 #import other py files
 from chars import Char  # Get Char class from chars

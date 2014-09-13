@@ -1,6 +1,5 @@
 class Char(object):
     def __init__(self):
-<<<<<<< HEAD:Betancourt-Harmony-Encapsulated/chars.py
         # First Char
         raven = Character()
         raven.name = "Duncan McNeil"
@@ -58,5 +57,3 @@ class Character(object):
         return sr
 
 
-=======
->>>>>>> parent of d72617f... Decided on Data:Betancourt_Harmony_Encapsulated/chars.py

@@ -8,13 +8,14 @@ Encapsulated Calculator
 import webapp2
 #import other py files
 from chars import Char  # Get Char class from chars
-#from layouts import Layout  # Get Char class from chars
+from layouts import Layout  # Get Char class from chars
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         c = Char()
-        #l = Layout()
+        l = Layout()
+        self.response.write(l.test)
         self.response.write(c.raven.name)
 
 app = webapp2.WSGIApplication([

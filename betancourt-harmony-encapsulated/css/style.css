@@ -57,26 +57,26 @@ nav a:last-of-type {
 	float: right;
 }
 #leftArrow, #rightArrow{
-	position: absolute;
-	width: 0;
 	height: 0;	
 }
 #leftArrow {
     border-bottom: 10px solid transparent;
     border-right: 30px solid #FF4C00;
     border-top: 10px solid transparent;
-    left: 4px;
+    float: left;
+	margin-right: 10px;
 }
 #rightArrow {
 	border-top: 10px solid transparent;
 	border-left: 30px solid #FF4C00;
 	border-bottom: 10px solid transparent;
-	right: 4px;
+	float: right;
+	margin-left: 10px;
 }
-nav a:hover #leftArrow {
+nav a:hover #leftArrow, nav a:visited #leftArrow  {
 	border-right: 30px solid #FEBA6E;
 }
-nav a:hover #rightArrow {
+nav a:hover #rightArrow, nav a:visited #rightArrow  {
 	border-left: 30px solid #FEBA6E;
 }
 footer {
@@ -85,6 +85,19 @@ footer {
 }
 footer p {
 	margin: 0;
+}
+
+/* Title Panel */
+#titlePanel {
+   left: 30%;
+   position: absolute;
+   text-align: center;
+   top: 145px;
+   width: 510px;
+}
+#titlePanel p {
+	font-size: 1.2em;
+	line-height: 2em;
 }
 
 /* Character Chards */
@@ -102,10 +115,10 @@ a.charChard {
 	width: 220px;
 }
 a.charChard h2, a.charChard h3 {
-	color: #92C3FF	
+	color: #10BCFF;	
 }
-a.charChard:hover h2, a.charChard:hover h3 {
-	color: #10BCFF;
+a.charChard:hover h2, a.charChard:visited h2, a.charChard:hover h3, a.charChard:visited h3 {
+	color: #2690FF;
 }
 a.charChard h2 {
 	font-size: 1.3em;
@@ -114,6 +127,7 @@ a.charChard h2 {
 a.charChard h3 {
 	font-size: 1em;
 	margin-top: 0;
+	letter-spacing: 1px;
 }
 .hide {
 	display: none;
@@ -140,14 +154,16 @@ p.name {
 a.charChard:nth-child(1n+2) span.hide{
 	display: none;
 }
-#titlePanel {
-   left: 30%;
-   position: absolute;
-   text-align: center;
-   top: 145px;
-   width: 510px;
+
+
+/* Media Queries */
+@media(max-width: 899px){
+	#titlePanel {
+	    left: 24%;
+	}
+	.charChard > span {
+		right: 24%;
+	}
+	
 }
-#titlePanel p {
-	font-size: 1.2em;
-	line-height: 2em;
-}
+

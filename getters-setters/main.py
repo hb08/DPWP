@@ -22,9 +22,6 @@ class MainHandler(webapp2.RequestHandler):
         s.calc_grade()
         self.response.write("Sam's final grade is " + str(s.final_grade) + "<br/>")
 
-
-
-
 class Transcript(object):
     def __init__(self):
         self.grade1 = 0

@@ -1,45 +1,53 @@
 class Char(object):
     def __init__(self):
         # First Char
-        self.raven = Character()
-        self.raven.name = "Duncan McNeil"
-        self.raven.code_name = "The Raven"
-        self.raven.age = 57
-        self.raven.descrip = "Hardly Human Headmaster"
-        self.raven.missions = 1243
-        self.raven.victory = 1241
+        self.chars_list = []
+        raven = Character()
+        raven.name = "Duncan McNeil"
+        raven.code_name = "The Raven"
+        raven.age = 57
+        raven.descrip = "Hardly Human Headmaster"
+        raven.missions = 1243
+        raven.victory = 1241
+        self.chars_list.append(raven)
 
-        self.clio = Character()
-        self.clio.name = "Laia Eavening"
-        self.clio.code_name = "Clio"
-        self.clio.age = 15
-        self.clio.descrip = "Beloved Bookworm"
-        self.clio.missions = 12
-        self.clio.victory = 8
+        clio = Character()
+        clio.name = "Laia Eavening"
+        clio.code_name = "Clio"
+        clio.age = 15
+        clio.descrip = "Beloved Bookworm"
+        clio.missions = 12
+        clio.victory = 8
+        self.chars_list.append(clio)
 
-        self.qilin = Character()
-        self.qilin.name = "Yvette Van De Voorst"
-        self.qilin.code_name = "Qilin"
-        self.qilin.age = 18
-        self.qilin.descrip = "The Last Unciorn"
-        self.qilin.missions = 47
-        self.qilin.victory = 47
+        qilin = Character()
+        qilin.name = "Yvette Van De Voorst"
+        qilin.code_name = "Qilin"
+        qilin.age = 18
+        qilin.descrip = "The Last Unciorn"
+        qilin.missions = 47
+        qilin.victory = 47
+        self.chars_list.append(qilin)
 
-        self.toon = Character()
-        self.toonname = "Rudy DeMarca"
-        self.tooncode_name = "Toon"
-        self.toonage = 15
-        self.toondescrip = "Artistic Intent"
-        self.toonmissions = 23
-        self.toonvictory = 18
+        toon = Character()
+        toon.name = "Rudy DeMarca"
+        toon.code_name = "Toon"
+        toon.age = 15
+        toon.descrip = "Artistic Intent"
+        toon.missions = 23
+        toon.victory = 18
+        self.chars_list.append(toon)
 
-        self.atlanta = Character()
-        self.atlantaname = "Vijana Ravana Romana"
-        self.atlantacode_name = "Atlanta"
-        self.atlantaage = 18
-        self.atlantadescrip = "Psychic Gypsy Werewolf"
-        self.atlantamissions = 19
-        self.atlantavictory = 18
+        atlanta = Character()
+        atlanta.name = "Vijana Ravana Romana"
+        atlanta.code_name = "Atlanta"
+        atlanta.age = 18
+        atlanta.descrip = "Psychic Gypsy Werewolf"
+        atlanta.missions = 19
+        atlanta.victory = 18
+        self.chars_list.append(atlanta)
+
+
 
 
 class Character(object):
@@ -52,8 +60,28 @@ class Character(object):
         self.victory = 0
         self.__status = "PC"
 
+    @property
     def success_rate(self):
-        sr = self.victory/self.missions
-        return sr
+        s = float(self.victory)/float(self.missions)
+        s *= 100
+        s = round(s, 2)
+        return str(s)
+
+    @property  # Must have for Setter
+    def status(self):
+        pass
+
+    # Setter
+    @status.setter  # Change Status
+    def status(self, m):
+        self.__status = m
+
+
+
+
+
+
+
+
 
 

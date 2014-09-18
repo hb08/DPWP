@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec26fb4-6c40-4359-8956-29a379c8c53e" name="Default" comment="Getting Practice - Classes">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/img/atlanta.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/img/clio.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/img/qilin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/img/raven.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/img/toon.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/css/style.css" afterPath="$PROJECT_DIR$/betancourt-harmony-encapsulated/css/style.css" />
     </list>
     <ignored path="DPWP Repository.iws" />
@@ -38,8 +43,8 @@
       <file leaf-file-name="layouts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/layouts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6866792" vertical-offset="84" max-vertical-offset="1035">
-              <caret line="30" column="87" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.47802198" vertical-offset="474" max-vertical-offset="1050">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -48,8 +53,8 @@
       <file leaf-file-name="chars.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/chars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1455">
-              <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+            <state vertical-scroll-proportion="-2.1818182" vertical-offset="0" max-vertical-offset="1455">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -108,9 +113,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="303" />
+    <option name="x" value="435" />
     <option name="y" value="22" />
-    <option name="width" value="735" />
+    <option name="width" value="1438" />
     <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -454,7 +459,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="303" y="22" width="735" height="733" extended-state="0" />
+    <frame x="435" y="22" width="1438" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -789,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/chars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1455">
-          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3313253" vertical-offset="0" max-vertical-offset="498">
@@ -805,10 +802,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/chars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1818182" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/layouts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6866792" vertical-offset="84" max-vertical-offset="1035">
-          <caret line="30" column="87" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.47802198" vertical-offset="474" max-vertical-offset="1050">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding />
         </state>
       </provider>

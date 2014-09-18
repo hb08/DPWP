@@ -2,15 +2,15 @@ class Char(object):
     def __init__(self):
         # First Char
         self.chars_list = []  # Empty list to put characters into for iteration
-        raven = Character()  # Create Character
-        raven.name = "Duncan McNeil"  # Character's Real Name
-        raven.code_name = "The Raven"  # Character's Code Name
-        raven.age = 57  # Character's Age
-        raven.descrip = "Hardly Human Headmaster"  # Brief Character/Powerset Description
-        raven.missions = 1243  # Total missions attempted
-        raven.victory = 1241  # Total missions accomplished successfully
-        raven.set_status = "NPC"  # Status - should be PC (Player Character) unless changed specifically by Admin
-        self.chars_list.append(raven)  # And add to list
+        archer = Character()  # Create Character
+        archer.name = "Ethan Keller"  # Character's Real Name
+        archer.code_name = "Archer"  # Character's Code Name
+        archer.age = 57  # Character's Age
+        archer.descrip = "Bow and Arrow Bad A**"  # Brief Character/Powerset Description
+        archer.missions = 1243  # Total missions attempted
+        archer.victory = 1241  # Total missions accomplished successfully
+        archer.set_status = "NPC"  # Status - should be PC (Player Character) unless changed specifically by Admin
+        self.chars_list.append(archer)  # And add to list
 
         clio = Character()  # Create Character
         clio.name = "Laia Eavening"  # Character's Real Name

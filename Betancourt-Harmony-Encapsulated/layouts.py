@@ -46,7 +46,8 @@ class Layout(object):  # Class to create layout
         for x in self.c.chars_list:
             age = str(x.age)  # Age is changed to a string
             # Set up the buttons
-            buttons = '''<a>
+            buttons = '''<a class="charChard">
+                <img src="img/peeps/{x.code_name}.jpg" alt="{x.code_name}" />
                 <h2>{x.code_name}</h2>
                 <h3>{x.descrip}</h3>
                 <span class="hide">

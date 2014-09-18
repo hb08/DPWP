@@ -3,10 +3,8 @@ $(document).ready(function(){
 		// If any panels are not hidden, hide them
 		if($('span.panel').hasClass('active')){
 			$('span.panel').removeClass('active').addClass('hide');
-			console.log("Removed?")
 		}
-		// Show current panel
-		console.log(this);	
+		// Show current panel	
 		$(this).children('span.panel').addClass('active').removeClass('hide')	
 	});
 });

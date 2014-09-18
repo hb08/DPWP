@@ -19,14 +19,19 @@ class Layout(object):  # Class to create layout
                 <h1><a href="#">Claremont Academy Admin Zone</a></h1>
                 <h2>Team Roster: Freedom League</h2>
                 <nav>
-                    <a href="#">Admin HQ</a>
-                    <a href="#">More Teams</a>
+                    <a href="#"><span id="leftArrow"></span>Admin HQ</a>
+                    <a href="#">More Teams<span id="rightArrow"></a>
                 </nav>
             </header>
         '''
 
         # Content Frame - Start charList class
-        self.content = '''<div id="charList">
+        self.content = ''' <div id="titlePanel">
+            <p>The Freedom League has long been established as the mascot of Freedom City, Texas.
+            With an ever-changing roster of super heroes willing to sacrifice their time, energy, and even lives,
+            they have earned the respect and love of the city they defend.
+        </div>
+        <div id="charList">
         '''
 
         # Footer - Close Wrapper Div, Body Div, and full footer, end HTML

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec26fb4-6c40-4359-8956-29a379c8c53e" name="Default" comment="Getting Practice - Classes">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/js/script.js" afterPath="$PROJECT_DIR$/betancourt-harmony-encapsulated/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/betancourt-harmony-encapsulated/css/style.css" afterPath="$PROJECT_DIR$/betancourt-harmony-encapsulated/css/style.css" />
     </list>
     <ignored path="DPWP Repository.iws" />
@@ -38,8 +39,8 @@
       <file leaf-file-name="layouts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/layouts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40900564" vertical-offset="682" max-vertical-offset="1215">
-              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.6593407" vertical-offset="105" max-vertical-offset="1290">
+              <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -108,7 +109,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-451" />
+    <option name="x" value="18" />
     <option name="y" value="22" />
     <option name="width" value="1438" />
     <option name="height" value="733" />
@@ -472,7 +473,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-451" y="22" width="1438" height="733" extended-state="0" />
+    <frame x="18" y="22" width="1438" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -825,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/betancourt-harmony-encapsulated/layouts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40900564" vertical-offset="682" max-vertical-offset="1215">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.6593407" vertical-offset="105" max-vertical-offset="1290">
+          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
           <folding />
         </state>
       </provider>

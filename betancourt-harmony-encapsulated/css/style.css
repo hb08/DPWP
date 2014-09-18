@@ -17,7 +17,10 @@ body {
 header {
 	margin-bottom: 8%;
 }
-/* Font  Families and Spacing */
+
+/* 
+	Font  Families and Spacing
+ */
 header h1 {
 	font-family: 'Special Elite', serif;
 	margin-bottom: 0;
@@ -36,7 +39,10 @@ a {
 a:hover, a:visited {
 	color: #FEBA6E;
 }
-/* Header  and Footer */
+
+/* 
+	Header  and Footer 
+*/
 header, footer {
 	text-align: center;
 }
@@ -87,7 +93,9 @@ footer p {
 	margin: 0;
 }
 
-/* Title Panel */
+/* 
+	Title Panel 
+*/
 #titlePanel {
    left: 30%;
    position: absolute;
@@ -100,7 +108,9 @@ footer p {
 	line-height: 2em;
 }
 
-/* Character Chards */
+/* 
+	Character Chards 
+*/
 #charList {
     display: block;
     margin: 340px auto 0;
@@ -156,7 +166,9 @@ a.charChard:nth-child(1n+2) span.hide{
 }
 
 
-/* Media Queries */
+/* 
+	Media Queries 
+*/
 @media(max-width: 899px){
 	#titlePanel {
 	    left: 24%;

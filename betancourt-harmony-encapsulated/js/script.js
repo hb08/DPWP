@@ -7,6 +7,7 @@ $(document).ready(function(){
 			if($('span.panel').hasClass('active')){
 				$('span.panel').removeClass('active').addClass('hide');
 			}
+			// If the title panel is not hidden, hide it
 			if(!$('#titlePanel').hasClass('hide')){
 				$('#titlePanel').addClass('hide');
 			}

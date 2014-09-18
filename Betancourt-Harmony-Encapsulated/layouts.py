@@ -1,11 +1,11 @@
 from chars import Char  # Get Char class from chars
 
 
-class Layout(object):
+class Layout(object):  # Class to create layout
     def __init__(self):
-        self.c = Char()
+        self.c = Char()  # Get characters from the chars page
 
-        # Layout
+        # Page header - Doctype through end of Header
         self.header = '''<!DOCTYPE HTML>
         <head>
             <title>The New Freedom League</title>
@@ -19,31 +19,34 @@ class Layout(object):
                     <a href="#">More Teams</a>
                 </nav>
             </header>
-
         '''
 
+        # Content - Beginning of wrapper
         self.content = '''
-        <div class="wrapper">
-        '''
+        <div class="wrapper">'''
 
-        self.footer = '''</body>
-        <footer>
-            <p>Created by and for Claremont Academy Admin 2014&copy;</p>
-        </footer>
-    </html>
-
-        '''
+        # Footer - Close Wrapper Div, Body Div, and full footer, end HTML
+        self.footer = '''</div>
+            </body>
+            <footer>
+                <p>Created by and for Claremont Academy Admin 2014&copy;</p>
+            </footer>
+        </html> '''
 
     # Print Layout to Page
     def print_layout(self):
+        # Page layout is header, content, filler, and footer
         page = self.header + self.content + self.filler_content() + self.footer
+        # Return it all, with locals filled in
         return page.format(**locals())
 
+    # Set filler content
     def filler_content(self):
-        formatted = ""
+        formatted = ""  # Empty Format container
+        # Cycle through every character in list
         for x in self.c.chars_list:
-            print x.success_rate
-            age = str(x.age)
+            age = str(x.age)  # Age is changed to a string
+            # Set up the buttons
             buttons = '''<a>
                 <h2>{x.code_name}</h2>
                 <p>{x.descrip}</p>
@@ -53,13 +56,10 @@ class Layout(object):
                     <p>Total Missions: {x.missions}</p>
                     <p>Total Victories: {x.victory}</p>
                     <p>Success Rate: {x.success_rate}%</p>
+                    <p class="note">Status: {x.get_status}</p>
                 </span>
             </a>'''
+            # Format it all with the locals
             formatted += buttons.format(**locals())
+        # Return the formatted stuff
         return formatted
-
-
-
-
-
-

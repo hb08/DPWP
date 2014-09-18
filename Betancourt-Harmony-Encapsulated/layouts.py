@@ -27,7 +27,8 @@ class Layout(object):  # Class to create layout
         self.footer = '''</div>
             </body>
             <footer>
-                <p>Created by and for Claremont Academy Admin 2014&copy;</p>
+                <p>Background image from <a href="http://www.morguefile.com/">MorgueFile</a>.
+                <p>All other images created by Harmony for Claremont Academy 2014&copy;</p>
             </footer>
         </html> '''
 

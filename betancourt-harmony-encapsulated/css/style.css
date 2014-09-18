@@ -10,6 +10,7 @@ body {
 	background: rgba(27, 26, 26, 0.6);
 	margin: 0 auto;
 	padding: 1%;
+	position: relative;
 	width: 90%;
 }
 header {
@@ -63,12 +64,51 @@ footer p {
 }
 
 /* Character Chards */
+#charList {
+	display: block;
+	width: 88%;
+	margin: 320px auto 0;
+}
 a.charChard {
 	display: inline-block;
 	text-align: center;
-	width: 300px;
+	width: 200px;
 }
-span.hide{
-	color: #fff;
-	text-align: left;
+a.charChard h2, a.charChard h3 {
+	color: #92C3FF	
+}
+a.charChard:hover h2, a.charChard:hover h3 {
+	color: #10BCFF;
+}
+a.charChard h2 {
+	font-size: 1.3em;
+	margin-bottom: 0;
+}
+a.charChard h3 {
+	font-size: 1em;
+	margin-top: 0;
+}
+.hide {
+	display: none;
+}
+.charChard > span {
+    color: #fff;
+    height: 300px;
+    position: absolute;
+    right: 33%;
+    text-align: left;
+    top: 135px;
+    width: 350px;
+}
+p.name {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.charChard span img {
+    float: left;
+    height: 300px;
+    padding-right: 5%;
+}
+a.charChard:nth-child(1n+2) span.hide{
+	display: none;
 }

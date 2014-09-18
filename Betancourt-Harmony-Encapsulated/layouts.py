@@ -5,11 +5,13 @@ class Layout(object):  # Class to create layout
     def __init__(self):
         self.c = Char()  # Get characters from the chars page
 
-        # Page header - Doctype through end of Header
+        # Page header - Doctype through end of body header
         self.header = '''<!DOCTYPE HTML>
         <head>
             <title>The New Freedom League</title>
             <link rel="stylesheet" href="css/style.css">
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="js/script.js"></script>
         </head>
         <body>
             <div class="wrapper">
@@ -23,8 +25,13 @@ class Layout(object):  # Class to create layout
             </header>
         '''
 
+        # Content Frame - Start charList class
+        self.content = '''<div id="charList">
+        '''
+
         # Footer - Close Wrapper Div, Body Div, and full footer, end HTML
         self.footer = '''</div>
+        </div>
             </body>
             <footer>
                 <p>Background image from <a href="http://www.morguefile.com/">MorgueFile</a>.
@@ -34,8 +41,8 @@ class Layout(object):  # Class to create layout
 
     # Print Layout to Page
     def print_layout(self):
-        # Page layout is header, filler, and footer
-        page = self.header + self.filler_content() + self.footer
+        # Page layout is header, content, filler, and footer
+        page = self.header + self.content + self.filler_content() + self.footer
         # Return it all, with locals filled in
         return page.format(**locals())
 
@@ -43,23 +50,27 @@ class Layout(object):  # Class to create layout
     def filler_content(self):
         formatted = ""  # Empty Format container
         # Cycle through every character in list
+        id = 0
         for x in self.c.chars_list:
             age = str(x.age)  # Age is changed to a string
             # Set up the buttons
             buttons = '''<a class="charChard">
-                <img src="img/peeps/{x.code_name}.jpg" alt="{x.code_name}" />
                 <h2>{x.code_name}</h2>
+                <img src="img/peeps/{x.code_name}.jpg" alt="{x.code_name}" />
                 <h3>{x.descrip}</h3>
-                <span class="hide">
-                    <p><span class="label">Name:</span> {x.name}</p>
+                <span class="panel hide" id={id}>
+                    <img src="img/costumes/{x.code_name}.jpg" alt="{x.code_name} Costume" />
+                    <p class="name"><span class="label">Name:</span> {x.name}</p>
                     <p><span class="label">Age:</span> {x.age}</p>
                     <p><span class="label">Total Missions:</span> {x.missions}</p>
                     <p><span class="label">Total Victories:</span> {x.victory}</p>
                     <p><span class="label">Success Rate:</span> {x.success_rate}%</p>
                     <p class="note">Status: {x.get_status}</p>
                 </span>
-            </a>'''
+            </a>
+            '''
             # Format it all with the locals
             formatted += buttons.format(**locals())
+            id += 1
         # Return the formatted stuff
         return formatted

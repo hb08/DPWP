@@ -1,0 +1,12 @@
+body {
+	background: url('../img/city.jpg') no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.wrapper {
+	background: #666; /* Fallback */
+	background: rgba(27, 26, 26, 0.6);
+	margin: 0 auto;
+	padding: 1%;
+	width: 90%;
+}

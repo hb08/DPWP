@@ -9,8 +9,10 @@ class Layout(object):  # Class to create layout
         self.header = '''<!DOCTYPE HTML>
         <head>
             <title>The New Freedom League</title>
+            <link rel="stylesheet" href="css/style.css">
         </head>
         <body>
+            <div class="wrapper">
             <header>
                 <h1><a href="#">Claremont Academy Admin Zone</a></h1>
                 <h2>Team Roster: Freedom League</h2>
@@ -20,10 +22,6 @@ class Layout(object):  # Class to create layout
                 </nav>
             </header>
         '''
-
-        # Content - Beginning of wrapper
-        self.content = '''
-        <div class="wrapper">'''
 
         # Footer - Close Wrapper Div, Body Div, and full footer, end HTML
         self.footer = '''</div>
@@ -35,8 +33,8 @@ class Layout(object):  # Class to create layout
 
     # Print Layout to Page
     def print_layout(self):
-        # Page layout is header, content, filler, and footer
-        page = self.header + self.content + self.filler_content() + self.footer
+        # Page layout is header, filler, and footer
+        page = self.header + self.filler_content() + self.footer
         # Return it all, with locals filled in
         return page.format(**locals())
 

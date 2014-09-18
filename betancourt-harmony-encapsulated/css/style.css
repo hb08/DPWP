@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite|Comfortaa:400,700|Bubblegum+Sans|Walter+Turncoat);
 body {
 	background: url('../img/city.jpg') no-repeat;
 	background-size: cover;
 	color: #fff;
+	font-family: 'Comfortaa', cursive;
 }
 .wrapper {
 	background: #666; /* Fallback */
@@ -9,4 +11,20 @@ body {
 	margin: 0 auto;
 	padding: 1%;
 	width: 90%;
+}
+header {
+	text-align: center;
+}
+header h1 {
+	font-family: 'Special Elite', serif;
+}
+h2 {
+	font-family: 'Bubblegum Sans', sans-serif;
+	letter-spacing: 2px;
+}
+a {
+	text-decoration: none;
+}
+a h3, span.label {
+	font-family: 'Walter Turncoat', sans-serif;
 }

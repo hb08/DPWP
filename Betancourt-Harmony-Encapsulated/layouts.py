@@ -47,13 +47,13 @@ class Layout(object):  # Class to create layout
             # Set up the buttons
             buttons = '''<a>
                 <h2>{x.code_name}</h2>
-                <p>{x.descrip}</p>
+                <h3>{x.descrip}</h3>
                 <span class="hide">
-                    <p>Name: {x.name}</p>
-                    <p>Age: {x.age}</p>
-                    <p>Total Missions: {x.missions}</p>
-                    <p>Total Victories: {x.victory}</p>
-                    <p>Success Rate: {x.success_rate}%</p>
+                    <p><span class="label">Name:</span> {x.name}</p>
+                    <p><span class="label">Age:</span> {x.age}</p>
+                    <p><span class="label">Total Missions:</span> {x.missions}</p>
+                    <p><span class="label">Total Victories:</span> {x.victory}</p>
+                    <p><span class="label">Success Rate:</span> {x.success_rate}%</p>
                     <p class="note">Status: {x.get_status}</p>
                 </span>
             </a>'''

@@ -79,12 +79,12 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         # Parse with JSON
         api_json = json.load(fromapi)
         # Get information from JSON
-        username = api_json['results'][0]['user']['username'] + " "  # Get alias username
-        newGender = api_json['results'][0]['user']['gender'] + " "  # Get alias gender
-        email = api_json['results'][0]['user']['email'] + " "  # Get alias email
-        dob = api_json['results'][0]['user']['dob'] + " "  # Get alias birthday
-        phone = api_json['results'][0]['user']['phone'] + " "  # Get alias phone
-        cell = api_json['results'][0]['user']['cell'] + " "  # Get alias cell phone
+        username = "Username: " + api_json['results'][0]['user']['username'] + " " + "<br/>"   # Get alias username
+        new_gender = "Gender: " + api_json['results'][0]['user']['gender'] + " " + "<br/>"   # Get alias gender
+        email = "Email: " + api_json['results'][0]['user']['email'] + " " + "<br/>"   # Get alias email
+        dob = "Birthday: " + api_json['results'][0]['user']['dob'] + " " + "<br/>"   # Get alias birthday
+        phone = "Phone Number: " + api_json['results'][0]['user']['phone'] + " " + "<br/>"   # Get alias phone
+        cell = "Mobile Number: " + api_json['results'][0]['user']['cell'] + " " + "<br/>"   # Get alias cell phone
         title = api_json['results'][0]['user']['name']['title']  # Get alias title
         first = api_json['results'][0]['user']['name']['first']  # Get alias first name
         last = api_json['results'][0]['user']['name']['last']  # Get alias last name
@@ -95,12 +95,14 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         image = api_json['results'][0]['user']['picture']['medium']  # Get alias image - medium size
 
         # Create name variable
-        name = title + " " + first + " " + last
+        name = "Name: " + title + " " + first + " " + last + "<br/>"
         # Create address variable
         address = street + " " + city + ", " + state + " " + zip
+        # format image
+        image_ready = '<img src="' + image + '" alt="Your Pretty Picture" /><br/>'
 
         # Return results
-        self._results = username + newGender + email + dob + phone + cell + name + address
+        self._results = image_ready + name + new_gender + username + dob + email + phone + cell + address
 
 
 

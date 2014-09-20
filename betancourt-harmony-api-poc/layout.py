@@ -78,9 +78,36 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
 
         # Parse with JSON
         api_json = json.load(fromapi)
-        # Get alias username
-        username = api_json['results'][0]['user']['username']
-        self._results = username
+        # Get information from JSON
+        username = api_json['results'][0]['user']['username'] + " "  # Get alias username
+        newGender = api_json['results'][0]['user']['gender'] + " "  # Get alias gender
+        email = api_json['results'][0]['user']['email'] + " "  # Get alias email
+        dob = api_json['results'][0]['user']['dob'] + " "  # Get alias birthday
+        phone = api_json['results'][0]['user']['phone'] + " "  # Get alias phone
+        cell = api_json['results'][0]['user']['cell'] + " "  # Get alias cell phone
+        title = api_json['results'][0]['user']['name']['title']  # Get alias title
+        first = api_json['results'][0]['user']['name']['first']  # Get alias first name
+        last = api_json['results'][0]['user']['name']['last']  # Get alias last name
+        street = api_json['results'][0]['user']['location']['street']  # Get alias street
+        city = api_json['results'][0]['user']['location']['city']  # Get alias city
+        state = api_json['results'][0]['user']['location']['state']  # Get alias  state
+        zip = api_json['results'][0]['user']['location']['zip']  # Get alias zip
+        image = api_json['results'][0]['user']['picture']['medium']  # Get alias image - medium size
+
+        # Create name variable
+        name = title + " " + first + " " + last
+        # Create address variable
+        address = street + " " + city + ", " + state + " " + zip
+
+        # Return results
+        self._results = username + newGender + email + dob + phone + cell + name + address
+
+
+
+
+
+        
+        
 
     # Override default page
     def page(self):

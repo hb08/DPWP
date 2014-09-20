@@ -9,23 +9,12 @@ Description:
 Utilizes the Random User Generator Api from randomuser.me
 """
 import webapp2
-
+from layout import Layout
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        test = '''
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/style.css">
-        <title>Proof Of Concept</title>
-    </head>
-    <body>
-        <img src="img/floating.jpg" alt="YAML Fail" />
-    </body>
-</html>
-'''
-        self.response.write(test)
+        l = Layout()
+        self.response.write(l.page)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

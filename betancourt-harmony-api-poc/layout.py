@@ -75,7 +75,12 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         geturl = urllib2.build_opener()
         # Use url to get result - request info from API
         fromapi = geturl.open(request)
-        self._results = "Working"
+
+        # Parse with JSON
+        api_json = json.load(fromapi)
+        # Get alias username
+        username = api_json['results'][0]['user']['username']
+        self._results = username
 
     # Override default page
     def page(self):

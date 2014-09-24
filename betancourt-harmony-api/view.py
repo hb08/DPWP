@@ -1,5 +1,5 @@
-""" This class handles how the data is shown to the user """
-from model import AltView
+""" This class handles how the data from the model is shown to the user """
+from model import RgModel
 
 
 class Layout(object):  # Class to create layout
@@ -12,9 +12,13 @@ class Layout(object):  # Class to create layout
         <link rel="stylesheet" href="css/style.css">
         <title>Proof Of Concept</title>
     </head>
-    <body>"""
+    <body>
+    """
+
         # Content place holder
-        self.content = ''
+        self._content = '''
+        '''
+
         # Close body, html
         self.footer = """
     </body>
@@ -24,15 +28,28 @@ class Layout(object):  # Class to create layout
     def page(self):
         return self.header + self.content + self.footer
 
+    @property
+    def content(self):  # Getter for Content
+        # Add in General header
+        gen_header = '''<header>
+            <h1>Hello!</h1>
+            <h2>My name is...</h2>
+        </header>'''
+        self._content = gen_header + self._content
+        return self._content
+
+    @content.setter  # Setter for content
+    def content(self, more):
+        self._content = self._content + more  # Content is content plus whatever needs to be added
+
 
 class IndexPage(Layout):  # Makes a layout object called IndexPage
     def __init__(self):  # Initialize the IndexPage class
         super(IndexPage, self).__init__()  # Initialize the Layout class to inherit
-        self.v = AltView()  # Imported View
+        self.v = RgModel()  # Imported View
         self._form_close = '</form>'  # Form closing tag
         self.__form_content = []  # Private and Protected
-        self._form = '<form method="GET">'  # Form opening tag
-
+        self._form = '<form method="GET">'  # Form opening tag, rest filled in with getter/setter
 
     @property
     def form(self):  # Getter for form
@@ -53,8 +70,10 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
                 self._form += '" placeholder="' + item[2] + '" />'  # If possible, put in the placeholder and close
             except:  # If you can't, end it now
                 self._form += '" />'
+        self._form += self._form_close  # Final form is everything so far with the closing form tag
+        self.content = self.form  # Adds full form to content
 
     # Override default page
     def page(self):
         # Add in form and results
-        return self.header + self.content + self.form + self._form_close + self.v.results + self.footer
+        return self.header + self.content + self.v.results + self.footer

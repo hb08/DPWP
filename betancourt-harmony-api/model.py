@@ -1,10 +1,10 @@
-""" This model handles fetching, parsing, and sorting data from the api. """
+""" This random generator model handles fetching, parsing, and sorting data from the api. """
 import urllib2  # Python classes and code needed to request/recieve/open url info
 import json
 import time  # Will translate epoch format for dob into something readable
 
 
-class AltView(object):
+class RgModel(object):
     def __init__(self):
         self._userinput = ''  # Form set by main
         self._results = ''
@@ -21,7 +21,7 @@ class AltView(object):
         elif gender == "female" or gender == 'f' or gender == 'woman' or gender == 'girl':  # Anything Female
             self._userinput = "female"  # Input is female
         else:  # Anything else
-            self._userinput = " "   # Leave it blank for random results
+            self._userinput = ""   # Leave it blank for random results
 
     @property
     def results(self):  # Getter for results
@@ -31,7 +31,6 @@ class AltView(object):
     def results(self, g):
         gender = g
         url = "http://api.randomuser.me/?gender=" + gender
-        print url
         # Assemble request
         request = urllib2.Request(url)
         # Use urllib2 to create object to get url

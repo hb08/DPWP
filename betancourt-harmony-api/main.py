@@ -13,7 +13,8 @@ import webapp2
 from view import IndexPage  # Import from View
 
 
-class MainHandler(webapp2.RequestHandler):  # Serves as Controller
+class MainHandler(webapp2.RequestHandler):
+    """ Serves as Controller class """
     def get(self):
         i = IndexPage()
         # Send an array full of arrays to the input setter | type, name, placeholder, submit first

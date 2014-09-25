@@ -64,9 +64,10 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         real name and phone number, or even if you are just stuck creating realistic information for fantasy characters,
         this random user generator can help by creating random and fake information needed to help someone in a hurry.
         </p>
-        <p>Enter a gender below, or click the button for random fake user information.</p>
+        <p>Enter a gender below, then the button for random fake user information.</p>
         </p>
         '''
+        self.error = "<p class='error'>Please enter a gender before hitting the button!</p>"
 
     @property
     def form(self):  # Getter for form
@@ -133,8 +134,11 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         # P contains what will be printed, so far header and content
         p = self.header + self.content
         if self.v.userinput:  # If there is user input
-            p += self.format_results + self.form  # Add in form results and form
-        else:  # Otherwise, just put in the form
+            if self.v.userinput == "None":  # If the user didn't put in a gender
+                p += self.intro + self.error + self.form  # Put in intro, error, then form
+            else:
+                p += self.format_results + self.form  # Add in form results and form
+        else:  # If there is no input, just put in the form
             p += self.intro + self.form
         # Always add the footer to the end
         p += self.footer

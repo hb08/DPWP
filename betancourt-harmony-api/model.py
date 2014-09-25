@@ -20,7 +20,7 @@ class RgModel(object):
         elif gender == "female" or gender == 'f' or gender == 'woman' or gender == 'girl':  # Anything Female
             self._userinput = "female"  # Input is female
         else:  # Anything else
-            self._userinput = "Any"   # Leave it blank for random results
+            self._userinput = "None"   # Set Input for no entry
 
     @property
     def results(self):  # Getter for results

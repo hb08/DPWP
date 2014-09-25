@@ -2,7 +2,7 @@
 
 body{
 	background: url('../img/bg.png');
-	font-family: 'Marvel', sans-serif;
+	font-family: 'Averia Sans Libre', sans-serif;
 	text-align: center;
 }
 .wrapper {
@@ -121,8 +121,32 @@ p.error {
 	color: red;
 }
 input[type="submit"] {
+	background: #62e200; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #62e200 0%, #61c419 52%, #61c419 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#62e200), color-stop(52%,#61c419), color-stop(100%,#61c419)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #62e200 0%,#61c419 52%,#61c419 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #62e200 0%,#61c419 52%,#61c419 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #62e200 0%,#61c419 52%,#61c419 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #62e200 0%,#61c419 52%,#61c419 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62e200', endColorstr='#61c419',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border-color: #3cb836;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #8ba789;
     display: block;
-    margin: 2em auto 0;
+    font: 1em "Averia Sans Libre",sans-serif;
+    margin: 1em auto 0;
+    padding: 3% 0.5%;
+}
+input[type="submit"]:hover {
+	background: #61c419; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #61c419 0%, #61c419 44%, #b2ff00 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#61c419), color-stop(44%,#61c419), color-stop(100%,#b2ff00)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #61c419 0%,#61c419 44%,#b2ff00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #61c419 0%,#61c419 44%,#b2ff00 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #61c419 0%,#61c419 44%,#b2ff00 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #61c419 0%,#61c419 44%,#b2ff00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c419', endColorstr='#b2ff00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: #fff;
 }
 label {
     margin-right: 1%;

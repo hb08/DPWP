@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,900,600);
+
 body{
 	background: url('../img/bg.png');
 	text-align: center;
@@ -29,11 +31,12 @@ header {
 	border-top-left-radius: 50px;
 	border-top-right-radius: 50px;
 }
-
 header, footer {
     background: none repeat scroll 0 0 #1893d7;
 }
-
+header h2 {
+	padding-bottom: 1%;
+}
 footer {
 	-webkit-border-bottom-right-radius: 50px;
 	-webkit-border-bottom-left-radius: 50px;
@@ -46,4 +49,16 @@ footer {
 }
 footer p{
 	padding: .5em;
+}
+
+h1 {
+	color: #fff;
+	font: 900 4em 'Raleway', sans-serif;
+	margin: 0;
+}
+h2 {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	margin-top: 0;
 }

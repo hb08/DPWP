@@ -64,7 +64,7 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         real name and phone number, or even if you are just stuck creating realistic information for fantasy characters,
         this random user generator can help by creating random and fake information needed to help someone in a hurry.
         </p>
-        <p>Enter a gender below, or click submit for random fake user information.</p>
+        <p>Enter a gender below, or click the button for random fake user information.</p>
         </p>
         '''
 
@@ -80,13 +80,16 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
     def form_content(self, arr):
         # Change the private form close variable
         self.__form_content = arr
-        for item in arr:  # Prints each array on a line | type, name, placeholder, submit first
-            self._form += '<input type="' + item[0] + '" name="' + item[1]
-            # Just in case there are more or less than 3 variables in the item array
-            try:  # Check for the ability to put in the placeholder item
-                self._form += '" placeholder="' + item[2] + '" />'  # If possible, put in the placeholder and close
-            except:  # If you can't, end it now
-                self._form += '" />'
+        for item in arr:  # Prints each array on a line
+            self._form += '<input type="' + item[0] + '"'  # Start with input type
+            if item[0] == "submit":  # If it's a submit button
+                self._form += ' value="' + item[1] + '"'  # Add in the value with text
+            else:  # Otherwise check if there are more or less than 3 variables in the item array
+                try:  # If possible, put in the placeholder and name
+                    self._form += '" placeholder="' + item[2] + '" name="' + item[1]
+                except:  # If you can't, add only the name
+                    self._form += '" name="' + item[1]
+            self._form += '" />'  # Close input
         self._form += self._form_close  # Final form is everything so far with the closing form tag
 
     @property

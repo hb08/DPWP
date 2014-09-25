@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="77" />
               <folding>
                 <element signature="e#242#256#0" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="view.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37798408" vertical-offset="615" max-vertical-offset="1875">
-              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.18435013" vertical-offset="851" max-vertical-offset="1920">
+              <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
               <folding>
                 <element signature="e#76#101#0" expanded="true" />
               </folding>
@@ -50,8 +50,8 @@
       <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.807693" vertical-offset="300" max-vertical-offset="1050">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="e#94#175#0" expanded="true" />
               </folding>
@@ -336,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.807693" vertical-offset="300" max-vertical-offset="1050">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="e#94#175#0" expanded="true" />
           </folding>
@@ -347,7 +347,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="77" />
           <folding>
             <element signature="e#242#256#0" expanded="true" />
           </folding>
@@ -356,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37798408" vertical-offset="615" max-vertical-offset="1875">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.18435013" vertical-offset="851" max-vertical-offset="1920">
+          <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
           <folding>
             <element signature="e#76#101#0" expanded="true" />
           </folding>

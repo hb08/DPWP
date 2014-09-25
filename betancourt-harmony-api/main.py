@@ -17,8 +17,8 @@ class MainHandler(webapp2.RequestHandler):
     """ Serves as Controller class """
     def get(self):
         i = IndexPage()
-        # Send an array full of arrays to the input setter | type, name, placeholder, submit first
-        i.form_content = [['submit', 'submit'], ['text', 'gender', 'Gender']]
+        # Send an array full of arrays to the input setter
+        i.form_content = [['text', 'gender', 'Gender'], ['submit', 'Who Am I?']]
         # If the user submits input
         if self.request.GET:
             i.v.userinput = self.request.GET['gender']  # Set gender

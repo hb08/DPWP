@@ -15,16 +15,14 @@ class RgModel(object):
     @userinput.setter  # Set user input value
     def userinput(self, g):
         gender = g.lower()  # Anything put in by user is formatted to lower case
-        if gender == "male" or gender == "m" or gender == 'man' or gender == 'boy':  # Anything Male
+        if gender == "male":  # Anything Male
             self._userinput = "male"  # Input is male
-            self.again = self.userinput
-        elif gender == "female" or gender == 'f' or gender == 'woman' or gender == 'girl':  # Anything Female
+        elif gender == "female":  # Anything Female
             self._userinput = "female"  # Input is female
-            self.again = self.userinput
         elif gender == "either":  # If Either Gender
             self._userinput = "Either"   # Set Input for no entry
-        else:  # If nothing
-            self._userinput = 'None'
+        else:  # If it's anything else
+            self._userinput = "None"
 
     @property
     def results(self):  # Getter for results
@@ -32,6 +30,7 @@ class RgModel(object):
 
     @results.setter
     def results(self, g):
+        print g
         gender = g
         url = "http://api.randomuser.me/?gender=" + gender
         # Assemble request

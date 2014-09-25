@@ -81,16 +81,14 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
     def form_content(self, arr):
         # Change the private form close variable
         self.__form_content = arr
+        arr.append(['submit', 'Who Am I?'])
         for item in arr:  # Prints each array on a line
-            self._form += '<input type="' + item[0] + '"'  # Start with input type
-            if item[0] == "submit":  # If it's a submit button
-                self._form += ' value="' + item[1] + '"'  # Add in the value with text
-            else:  # Otherwise check if there are more or less than 3 variables in the item array
-                try:  # If possible, put in the placeholder and name
-                    self._form += '" placeholder="' + item[2] + '" name="' + item[1]
-                except:  # If you can't, add only the name
-                    self._form += '" name="' + item[1]
-            self._form += '" />'  # Close input
+            self._form += '<input type="' + item[0] + '" value="' + item[1] + '"'  # Start with input type and value
+            try:  # If possible, put in the Name and close input
+                self._form += ' name="' + item[2] + '" />'
+                self._form += '<label for="' + item[1] + '">' + item[1].capitalize() + '</label>'
+            except:  # If you can't, add only close input
+                self._form += ' />'  # Close input
         self._form += self._form_close  # Final form is everything so far with the closing form tag
 
     @property
@@ -135,7 +133,7 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         p = self.header + self.content
         if self.v.userinput:  # If there is user input
             if self.v.userinput == "None":  # If the user didn't put in a gender
-                p += self.intro + self.error + self.form  # Put in intro, error, then form
+                p += self.intro + self.error + self.form
             else:
                 p += self.format_results + self.form  # Add in form results and form
         else:  # If there is no input, just put in the form

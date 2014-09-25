@@ -18,7 +18,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         i = IndexPage()
         # Send an array full of arrays to the input setter
-        i.form_content = [['text', 'gender', 'Gender'], ['submit', 'Who Am I?']]
+        i.form_content = [['radio', 'male', 'gender'], ['radio', 'female', 'gender'], ['radio', 'either', 'gender']]
         # If the user submits input
         if self.request.GET:
             i.v.userinput = self.request.GET['gender']  # Set gender
@@ -29,3 +29,5 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
+
+

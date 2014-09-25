@@ -17,10 +17,14 @@ class RgModel(object):
         gender = g.lower()  # Anything put in by user is formatted to lower case
         if gender == "male" or gender == "m" or gender == 'man' or gender == 'boy':  # Anything Male
             self._userinput = "male"  # Input is male
+            self.again = self.userinput
         elif gender == "female" or gender == 'f' or gender == 'woman' or gender == 'girl':  # Anything Female
             self._userinput = "female"  # Input is female
-        else:  # Anything else
-            self._userinput = "None"   # Set Input for no entry
+            self.again = self.userinput
+        elif gender == "either":  # If Either Gender
+            self._userinput = "Either"   # Set Input for no entry
+        else:  # If nothing
+            self._userinput = 'None'
 
     @property
     def results(self):  # Getter for results

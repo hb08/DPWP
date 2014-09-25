@@ -97,17 +97,29 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         # Formatting and simplifying
         formatted = "<div class='rg'>"  # Begin formatting
         f_end = "</div>"
-        username = "Username: " + self.v.results['us'] + "<br/>"  # Add label and break
-        new_gender = "Gender: " + self.v.results['g'].capitalize() + "<br/>"  # Add label, capitalize, and break
-        email = "Email: " + self.v.results['e'] + "<br/>"  # Add label and break
-        dob = time.strftime('%B %d %Y', time.localtime(self.v.results['dob']))  # DOB now is local readable time
-        bday = "Birthday: " + dob + "<br/>"  # Add label and break
-        phone = "Phone Number: " + self.v.results['p'] + "<br/>"  # Add label and break
-        cell = "Mobile Number: " + self.v.results['c'] + "<br/>"  # Add label and break
-        image_ready = '<img src="' + self.v.results['i'] + '" alt="Your Pretty Picture" /><br/>'  # format image
+        # Add label and break to username
+        username = "<p><span>Username:</span> " + self.v.results['us'] + "</p>"
+        # Add label, capitalize gender, and add break
+        new_gender = "<p><span>Gender:</span> " + self.v.results['g'].capitalize() + "</p>"
+        # Add label and break to email
+        email = "<p><span>Email:</span> " + self.v.results['e'] + "</p>"
+        # DOB now is local readable time
+        dob = time.strftime('%B %d %Y', time.localtime(self.v.results['dob']))
+        # Add label and break
+        bday = "<p><span>Birthday:</span> " + dob + "</p>"
+        # Add label and break
+        phone = "<p><span>Phone Number:</span> " + self.v.results['p'] + "</p>"
+        # Add label and break
+        cell = "<p><span>Mobile Number:</span> " + self.v.results['c'] + "</p>"
+        # Format image
+        image_ready = "<img src='" + self.v.results['i'] + "' alt='Your Pretty Picture' />"
+        # Name
+        n = "<p class='name'>" + self.v.results['n'] + " </p>"
+        # Address
+        add = "<p><span>Address:</span> " + self.v.results['a'] + "</p>"
 
         # Return results
-        formatted += image_ready + new_gender + username + bday + email + phone + cell + self.v.results['a'] + f_end
+        formatted += n + image_ready + new_gender + username + bday + email + phone + cell + add + f_end
         return formatted  # Adds results  to content
 
     # Override default page

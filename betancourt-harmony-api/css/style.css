@@ -78,9 +78,9 @@ p {
 	width: 60%;
 }
 .rg {
-    margin: 0 auto;
+    margin: 0 auto 1%;
     position: relative;
-    width: 80%;
+    width: 75%;
 }
 .rg span {
 	font-size: 1.1em;
@@ -89,6 +89,7 @@ p {
 
 .rg p {
 	font-family: 'Gloria Hallelujah';
+	letter-spacing: 1px;
 	padding: 0;
 	width: 100%;
 }
@@ -98,19 +99,21 @@ form {
 }
 .rg #left, .rg #right {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .rg #right {
-	width: 50%;
+	width: 60%;
 	text-align: left;
 }
 #right > p:first-of-type {
     margin-top: 0;
 }
 .rg #left {
-	width: 40%;
-	margin-right: 5%;
+	width: 30%;
+	margin-right: 10%;
 }
 .rg img {
+	border: 10px solid #0f74aa;
+	border-radius: 10px;
 	width: 100%;
 }

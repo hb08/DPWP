@@ -58,14 +58,13 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         self._form = '<form method="GET">'  # Form opening tag, rest filled in with getter/setter
         self._format_results = ''
         self.intro = '''
-        <h1>Intro Header</h1>
-        <p>Header Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nulla nibh velit, posuere at sem ornare, feugiat dictum enim.
-        Nullam efficitur ultrices viverra.
-        Curabitur pharetra consectetur eros quis aliquam.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        Etiam et pellentesque odio. Donec eget blandit libero.
-        Cras facilisis fringilla erat, nec iaculis libero mollis vehicula.
+        <h3>I'd rather not say...</h3>
+        <p>We live in a world where we are constantly asked for personal information, but told not to give it.</p>
+        <p>If you want to listen to music, without giving your real address, peruse a dating site, without giving your
+        real name and phone number, or even if you are just stuck creating realistic information for fantasy characters,
+        this random user generator can help by creating random and fake information needed to help someone in a hurry.
+        </p>
+        <p>Enter a gender below, or click submit for random fake user information.</p>
         </p>
         '''
 

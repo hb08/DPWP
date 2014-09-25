@@ -1,7 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,900,600);
+@import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre:300,400|Gloria+Hallelujah|Raleway:900);
 
 body{
 	background: url('../img/bg.png');
+	font-family: 'Marvel', sans-serif;
 	text-align: center;
 }
 .wrapper {
@@ -34,9 +35,6 @@ header {
 header, footer {
     background: none repeat scroll 0 0 #1893d7;
 }
-header h2 {
-	padding-bottom: 1%;
-}
 footer {
 	-webkit-border-bottom-right-radius: 50px;
 	-webkit-border-bottom-left-radius: 50px;
@@ -51,14 +49,38 @@ footer p{
 	padding: .5em;
 }
 
-h1 {
+/*
+	Header
+*/
+header h1, header h2 {
 	color: #fff;
-	font: 900 4em 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+header h1 {
+	font-size: 4em;
+	font-weight: 900;
 	margin: 0;
 }
-h2 {
-	color: #fff;
+header h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	margin-top: 0;
+	padding-bottom: 1%;
+}
+
+/*
+	Intro
+*/
+h3 {
+	font: 2em 'Gloria Hallelujah';
+}
+
+p {
+	font-family: 'Averia Sans Libre', cursive;
+	font-weight: 300;
+	padding: 0 2em;
+}
+
+form {
+	padding: 1%;
 }

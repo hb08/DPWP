@@ -77,6 +77,11 @@ p {
 	padding: 0 2em;
 	width: 60%;
 }
+.rg {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
 .rg span {
 	font-size: 1.1em;
 	font-weight: 400;
@@ -88,4 +93,14 @@ p {
 
 form {
 	padding: 1%;
+}
+.rg #left, .rg #right {
+	display: inline-block;
+}
+.rg #left {
+	width: 60%;
+	margin-right: 8%;
+}
+.rg #right {
+	width: 30%;
 }

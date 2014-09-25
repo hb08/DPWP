@@ -119,7 +119,12 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         add = "<p><span>Address:</span> " + self.v.results['a'] + "</p>"
 
         # Return results
-        formatted += n + image_ready + new_gender + username + bday + email + phone + cell + add + f_end
+        formatted += n  # Start with Name
+        # Add in content in a left div
+        formatted += "<div id='left'>" + username + new_gender + email + bday + phone + cell + add + "</div>"
+        # Add image into right div and close rg class
+        formatted += "<div id='right'>" + image_ready + "</div>" + f_end
+
         return formatted  # Adds results  to content
 
     # Override default page

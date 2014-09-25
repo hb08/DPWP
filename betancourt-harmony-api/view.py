@@ -111,11 +111,11 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         phone = "<p><span>Phone Number:</span> " + self.v.results['p'] + "</p>"
         # Add label and break
         cell = "<p><span>Mobile Number:</span> " + self.v.results['c'] + "</p>"
-        # Format image
+        # Format image with labels and alt
         image_ready = "<img src='" + self.v.results['i'] + "' alt='Your Pretty Picture' />"
-        # Name
+        # Format name with special paragraph class for css
         n = "<p class='name'>" + self.v.results['n'] + " </p>"
-        # Address
+        # Format Address
         add = "<p><span>Address:</span> " + self.v.results['a'] + "</p>"
 
         # Return results
@@ -125,15 +125,18 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         # Add contents into right div and close rg class
         formatted += "<div id='right'>" + username + new_gender + email + bday + phone + cell + add + "</div>" + f_end
 
-        return formatted  # Adds results  to content
+        # Adds results  to content
+        return formatted
 
     # Override default page
     def page(self):
+        # P contains what will be printed, so far header and content
         p = self.header + self.content
-        if self.v.userinput:
-            p += self.format_results + self.form
-        else:
+        if self.v.userinput:  # If there is user input
+            p += self.format_results + self.form  # Add in form results and form
+        else:  # Otherwise, just put in the form
             p += self.intro + self.form
-
+        # Always add the footer to the end
         p += self.footer
+        # Return final product
         return p

@@ -6,7 +6,7 @@ import json
 class RgModel(object):
     def __init__(self):
         self._userinput = ''  # Form set by main
-        self._results = {}
+        self._results = {}  # Results container to be filled by setter
 
     @property
     def userinput(self):  # Getter for user input

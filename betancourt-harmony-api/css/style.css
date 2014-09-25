@@ -83,8 +83,10 @@ p {
     width: 75%;
 }
 .rg span {
+	display: inline-block;
 	font-size: 1.1em;
 	font-weight: 400;
+	width: 8em;
 }
 
 .rg p {
@@ -122,6 +124,7 @@ form {
 }
 p.error {
 	color: red;
+	margin: 0 auto;
 }
 input[type="submit"] {
 	background: #62e200; /* Old browsers */
@@ -137,7 +140,7 @@ input[type="submit"] {
     box-shadow: 0 0 3px #8ba789;
     display: block;
     font: 1em "Averia Sans Libre",sans-serif;
-    margin: 1em auto 0;
+    margin: 1em auto .5em;
     padding: 1%;
 }
 input[type="submit"]:hover {

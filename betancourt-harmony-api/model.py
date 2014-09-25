@@ -1,6 +1,6 @@
 """ This random generator model handles fetching, parsing, and sorting data from the api. """
-import urllib2  # Python classes and code needed to request/recieve/open url info
-import json
+import urllib2  # Python classes and code needed to request/receive/open url info
+import json  # Json needed to compile/format responses from API
 
 
 class RgModel(object):
@@ -22,17 +22,16 @@ class RgModel(object):
         elif gender == "either":  # If Either Gender
             self._userinput = "Either"   # Set Input for no entry
         else:  # If it's anything else
-            self._userinput = "None"
+            self._userinput = "None"  # Value is none
 
     @property
     def results(self):  # Getter for results
-        return self._results
+        return self._results  # Returns private results
 
     @results.setter
-    def results(self, g):
-        print g
-        gender = g
-        url = "http://api.randomuser.me/?gender=" + gender
+    def results(self, g):  # Sets results
+        gender = g  # Gender is variable sent in
+        url = "http://api.randomuser.me/?gender=" + gender  # Url plus gender selection
         # Assemble request
         request = urllib2.Request(url)
         # Use urllib2 to create object to get url

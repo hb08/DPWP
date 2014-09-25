@@ -19,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
         i = IndexPage()
         # Send an array full of arrays to the input setter | type, name, placeholder, submit first
         i.form_content = [['submit', 'submit'], ['text', 'gender', 'Gender']]
-        # If the user submits imput
+        # If the user submits input
         if self.request.GET:
             i.v.userinput = self.request.GET['gender']  # Set gender
             i.v.results = i.v.userinput  # Set results with gender

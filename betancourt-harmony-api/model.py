@@ -3,7 +3,6 @@ import urllib2  # Python classes and code needed to request/recieve/open url inf
 import json
 
 
-
 class RgModel(object):
     def __init__(self):
         self._userinput = ''  # Form set by main

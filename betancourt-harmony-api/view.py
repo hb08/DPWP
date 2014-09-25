@@ -14,6 +14,7 @@ class Layout(object):  # Class to create layout
         <title>Proof Of Concept</title>
     </head>
     <body>
+        <div class='wrapper'>
     """
 
         # Content place holder
@@ -22,6 +23,10 @@ class Layout(object):  # Class to create layout
 
         # Close body, html
         self.footer = """
+        <footer>
+            <p>Created by Harmony 2014&copy;</p>
+        </footer>
+        </div>
     </body>
 </html>
 """
@@ -52,7 +57,17 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         self.__form_content = []  # Private and Protected
         self._form = '<form method="GET">'  # Form opening tag, rest filled in with getter/setter
         self._format_results = ''
-        print self._format_results
+        self.intro = '''
+        <h1>Intro Header</h1>
+        <p>Header Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla nibh velit, posuere at sem ornare, feugiat dictum enim.
+        Nullam efficitur ultrices viverra.
+        Curabitur pharetra consectetur eros quis aliquam.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Etiam et pellentesque odio. Donec eget blandit libero.
+        Cras facilisis fringilla erat, nec iaculis libero mollis vehicula.
+        </p>
+        '''
 
     @property
     def form(self):  # Getter for form
@@ -74,7 +89,6 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
             except:  # If you can't, end it now
                 self._form += '" />'
         self._form += self._form_close  # Final form is everything so far with the closing form tag
-        self.content = self.form  # Adds full form to content
 
     @property
     def format_results(self):  # Getter for results
@@ -92,9 +106,15 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
 
         # Return results
         formatted += image_ready + new_gender + username + bday + email + phone + cell + self.v.results['a'] + f_end
-        return formatted
+        return formatted  # Adds results  to content
 
     # Override default page
     def page(self):
-        # Add in form and results
-        return self.header + self.content + self.format_results + self.footer
+        p = self.header + self.content
+        if self.v.userinput:
+            p += self.format_results + self.form
+        else:
+            p += self.intro + self.form
+
+        p += self.footer
+        return p

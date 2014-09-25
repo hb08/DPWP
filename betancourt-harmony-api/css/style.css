@@ -66,10 +66,6 @@ header h2 {
 h3, p.name {
 	font: 2em 'Gloria Hallelujah';
 }
-
-p, .rg span {
-	font-family: 'Averia Sans Libre', cursive;
-}
 p {
 	font-weight: 300;
 	line-height: 2em;
@@ -77,30 +73,22 @@ p {
 	padding: 0 2em;
 	width: 60%;
 }
+p.error {
+	color: red;
+	margin: 0 auto;
+}
+p, #right p {
+	font-family: 'Averia Sans Libre', cursive;
+}
 .rg {
     margin: 0 auto 1%;
     position: relative;
     width: 75%;
 }
-.rg span {
-	display: inline-block;
-	font-size: 1.1em;
-	font-weight: 400;
-	width: 8em;
-}
-
 .rg p {
-	font-family: 'Gloria Hallelujah';
 	letter-spacing: 1px;
 	padding: 0;
 	width: 100%;
-}
-
-form {
-    border-top: 1px dashed #65a5ff;
-    margin: 0 auto;
-    padding: 1%;
-    width: 80%;
 }
 .rg #left, .rg #right {
 	display: inline-block;
@@ -109,9 +97,6 @@ form {
 .rg #right {
 	width: 60%;
 	text-align: left;
-}
-#right > p:first-of-type {
-    margin-top: 0;
 }
 .rg #left {
 	width: 30%;
@@ -122,9 +107,25 @@ form {
 	border-radius: 10px;
 	width: 100%;
 }
-p.error {
-	color: red;
-	margin: 0 auto;
+#right p.rgl {
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 400;
+	margin-right: 1em;
+	width: 8em;
+	vertical-align: top;
+}
+#right p {
+	display: inline-block;
+	margin: 0.5em auto;
+	width: 14em;	
+}
+
+form {
+    border-top: 1px dashed #65a5ff;
+    margin: 0 auto;
+    padding: 1%;
+    width: 80%;
 }
 input[type="submit"] {
 	background: #62e200; /* Old browsers */

@@ -107,25 +107,25 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         f_end = "</div>"  # End of div.rg
 
         # Add label span and break to username
-        username = "<p><span>Username:</span> " + self.v.results['us'] + "</p>"
+        username = "<p class='rgl'>Username:</p><p> " + self.v.results['us'] + "</p>"
         # Add label span, capitalize gender, and add break
-        new_gender = "<p><span>Gender:</span> " + self.v.results['g'].capitalize() + "</p>"
+        new_gender = "<p class='rgl'>Gender:</p><p> " + self.v.results['g'].capitalize() + "</p>"
         # Add label span and break to email
-        email = "<p><span>Email:</span> " + self.v.results['e'] + "</p>"
+        email = "<p class='rgl'>Email:</p><p> " + self.v.results['e'] + "</p>"
         # DOB now is local readable time
         dob = time.strftime('%B %d %Y', time.localtime(self.v.results['dob']))  # Only instance of time being used
         # Add label span and break
-        bday = "<p><span>Birthday:</span> " + dob + "</p>"
+        bday = "<p class='rgl'>Birthday:</p><p> " + dob + "</p>"
         # Add label span and break
-        phone = "<p><span>Phone Number:</span> " + self.v.results['p'] + "</p>"
+        phone = "<p class='rgl'>Phone Number:</p><p> " + self.v.results['p'] + "</p>"
         # Add label span and break
-        cell = "<p><span>Cell Number:</span> " + self.v.results['c'] + "</p>"
+        cell = "<p class='rgl'>Cell Number:</p><p> " + self.v.results['c'] + "</p>"
         # Format image with src and alt
         image_ready = "<img src='" + self.v.results['i'] + "' alt='Your Pretty Picture' />"
         # Format name with special paragraph class for css
         n = "<p class='name'>" + self.v.results['n'] + " </p>"
         # Format Address
-        add = "<p><span>Address:</span> " + self.v.results['a'] + "</p>"
+        add = "<p class='rgl'>Address:</p><p> " + self.v.results['a'] + "</p>"
 
         # Return results
         formatted += n  # Start with Name

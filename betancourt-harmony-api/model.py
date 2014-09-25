@@ -53,7 +53,7 @@ class RgModel(object):
         city = api_json['results'][0]['user']['location']['city']  # Get alias city
         state = api_json['results'][0]['user']['location']['state']  # Get alias  state
         zip = api_json['results'][0]['user']['location']['zip']  # Get alias zip
-        image = api_json['results'][0]['user']['picture']['medium']  # Get alias image - medium size
+        image = api_json['results'][0]['user']['picture']['large']  # Get alias image - large size
         # Put all elements of name into one name with capitalized first letters
         name = t.capitalize() + " " + first.capitalize() + " " + last.capitalize()
         # Put all address elements into one variable with title format on the words

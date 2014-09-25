@@ -121,9 +121,9 @@ class IndexPage(Layout):  # Makes a layout object called IndexPage
         # Return results
         formatted += n  # Start with Name
         # Add in content in a left div
-        formatted += "<div id='left'>" + username + new_gender + email + bday + phone + cell + add + "</div>"
-        # Add image into right div and close rg class
-        formatted += "<div id='right'>" + image_ready + "</div>" + f_end
+        formatted += "<div id='left'>" + image_ready + "</div>"
+        # Add contents into right div and close rg class
+        formatted += "<div id='right'>" + username + new_gender + email + bday + phone + cell + add + "</div>" + f_end
 
         return formatted  # Adds results  to content
 

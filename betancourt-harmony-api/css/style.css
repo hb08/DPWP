@@ -89,6 +89,8 @@ p {
 
 .rg p {
 	font-family: 'Gloria Hallelujah';
+	padding: 0;
+	width: 100%;
 }
 
 form {
@@ -96,11 +98,19 @@ form {
 }
 .rg #left, .rg #right {
 	display: inline-block;
-}
-.rg #left {
-	width: 60%;
-	margin-right: 8%;
+	vertical-align: top;
 }
 .rg #right {
-	width: 30%;
+	width: 50%;
+	text-align: left;
+}
+#right > p:first-of-type {
+    margin-top: 0;
+}
+.rg #left {
+	width: 40%;
+	margin-right: 5%;
+}
+.rg img {
+	width: 100%;
 }

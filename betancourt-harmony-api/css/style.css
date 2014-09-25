@@ -11,7 +11,7 @@ body{
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	border-radius: 50px;
-	margin: 6% auto;
+	margin: 1% auto;
 	position: relative;
 	width: 80%;
 }
@@ -95,7 +95,10 @@ p {
 }
 
 form {
-	padding: 1%;
+    border-top: 1px dashed #65a5ff;
+    margin: 0 auto;
+    padding: 1%;
+    width: 80%;
 }
 .rg #left, .rg #right {
 	display: inline-block;
@@ -129,13 +132,13 @@ input[type="submit"] {
 	background: -ms-radial-gradient(center, ellipse cover,  #62e200 0%,#61c419 52%,#61c419 100%); /* IE10+ */
 	background: radial-gradient(ellipse at center,  #62e200 0%,#61c419 52%,#61c419 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62e200', endColorstr='#61c419',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    border-color: #3cb836;
-    border-radius: 50%;
+    border: 2px solid #3cb836;
+    border-radius: 50px;
     box-shadow: 0 0 3px #8ba789;
     display: block;
     font: 1em "Averia Sans Libre",sans-serif;
     margin: 1em auto 0;
-    padding: 3% 0.5%;
+    padding: 1%;
 }
 input[type="submit"]:hover {
 	background: #61c419; /* Old browsers */
@@ -147,6 +150,7 @@ input[type="submit"]:hover {
 	background: radial-gradient(ellipse at center,  #61c419 0%,#61c419 44%,#b2ff00 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c419', endColorstr='#b2ff00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	color: #fff;
+	text-shadow: 0 0 4px #000;
 }
 label {
     margin-right: 1%;
